@@ -13,7 +13,8 @@ public class PostClearForgingBonds {
     private Clicks clicks;
     private Robot robot;
 
-    public void SC() {
+    //if calling from FB pass a 1 if tempest pass anything else
+    public void SC(int FBorTempest) {
 
 
         try {
@@ -35,6 +36,7 @@ public class PostClearForgingBonds {
         robot.delay((int) (2000 * Math.random() + 5000));
 
         //points (always needs to happen for FB)
+        if (FBorTempest ==1) {
         int xrandpoints = (int) (Math.random() * 120);
         int yrandpoints = (int) (Math.random() * 29);
         int xpickpoints = (int) (xrandpoints + 400);
@@ -44,6 +46,7 @@ public class PostClearForgingBonds {
         robot.mouseMove(xpickpoints, ypickpoints);
         Clicks.leftClick(robot);
         robot.delay((int) (2000 * Math.random() + 5000));
+    }
     }
 
         /*

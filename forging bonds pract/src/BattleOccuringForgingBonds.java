@@ -54,7 +54,7 @@ public class BattleOccuringForgingBonds {
                 PostClear bordercolors1 = new PostClear();
 
                 //one tap to proceed past stage clear and clicking points
-                pcfb.SC();
+                pcfb.SC(1);
 
                 //checks if quest borders are there and should be working fine imported from TT
                 bordercolors1.BorderColors();

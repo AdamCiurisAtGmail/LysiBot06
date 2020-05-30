@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.Scanner;
 
 public class Main {
@@ -42,25 +41,35 @@ public class Main {
                    beginFB.Eventsforgingbonds(q,whichbox,advintbeg);
                    test.BattleOccuring();
                    test.FBRewards();
+
+                   //story skip buttons not currently working may be checking too fast
                    test.story1checks();
                    test.story2checks();
                    q = 0;
                }
                break;
            }
+
            //beginning of tempest trials
            case 3: {
                System.out.print("event box number, runs, stratum");
-               int whichbox = (int) scnr.nextInt();
+               int whichbox = scnr.nextInt();
                int runs = scnr.nextInt();
                int stratum = scnr.nextInt();
 
+
+
                TempestTrials beginTempest = new TempestTrials();
                BattleOccuringTempest test = new BattleOccuringTempest();
-               int q = 1;
+               PostClearTempestQuests aaugh = new PostClearTempestQuests();
+
+               int q = 0;
 
                beginTempest.Eventstempesttrials(q,whichbox,stratum);
-
+               for (int i = 1; i < runs; i++){
+                    test.BattleOccuring();
+                    aaugh.FinalTasks();
+                }
 
            }
 

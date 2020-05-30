@@ -4,12 +4,16 @@ public class BattleOccuringTempest{
 this method begins at the battle screen and proceeds through the next battles
 while checking for quest pop ups in between
  */
+    //battleoccuring needs to call NEED TO PASS THE AMOUNT OF BATTLES HERE
+
     public static void BattleOccuring() {
 
         StageClearGameOver stageCleAr = new StageClearGameOver();
         ColorComponents breakup = new ColorComponents();
         ColorTolerance checktol = new ColorTolerance();
         //checktol.stageclearToleranceTest;
+        TempestTrials beginTempest = new TempestTrials();
+
 
         int SCorGO = 0;
         int maxruns = 0;
@@ -56,8 +60,8 @@ while checking for quest pop ups in between
                 PostClearForgingBonds pcfb = new PostClearForgingBonds();
                 PostClear bordercolors1 = new PostClear();
 
-                //one tap to proceed past stage clear and clicking points
-                pcfb.SC();
+                //one tap to proceed past stage clear and clicking points FIX FIX FI X FIX FIX
+                pcfb.SC(99);
 
                 //checks if quest borders are there and should be working fine imported from TT
                 bordercolors1.BorderColors();
@@ -84,43 +88,18 @@ while checking for quest pop ups in between
                 break;
 
         }
-        //the below method recursively calls it's own method however
+        //the below  recursively calls it's own method however
         //many times it needs to
+
+
+
+
+
+            beginTempest.Eventstempesttrials(40,1,1);
+
+
     }
-    public static void FBRewards() {
-        ForgingBonds FB = new ForgingBonds();
-        StageClearGameOver stageCleAr = new StageClearGameOver();
-        ColorComponents breakup = new ColorComponents();
-        ColorTolerance checktol = new ColorTolerance();
-        int rewardspressesd = 0;
-        int maxruns3 = 0;
-        //checking for daily first clear reward and possibly other rewards
 
-        PostClearForgingBonds bordercolorsFB = new PostClearForgingBonds();
-        PostClearForgingBonds pcfb = new PostClearForgingBonds();
-        PostClear bordercolors1 = new PostClear();
-
-
-        //runs ten times and ends if it clicks twice
-        bordercolorsFB.BorderColorsRewards();
-        while (maxruns3 != 15) {
-
-            int tolcheckofborder[] = breakup.ColorComponentsMethod(bordercolorsFB.BorderColorsRewards());
-            checktol.borderToleranceTest(tolcheckofborder, tolcheckofborder.length);
-
-            if (checktol.borderToleranceTest(tolcheckofborder, tolcheckofborder.length) == true) {
-                pcfb.BorderColorsRewards();
-                pcfb.rewards();
-                rewardspressesd++;
-            }
-
-            if (rewardspressesd == 4) {
-                break;
-            }
-
-            maxruns3++;
-            System.out.println("we are in rewards");
-        }
 
 
 
@@ -128,7 +107,8 @@ while checking for quest pop ups in between
 
 
 
-}
+
+
 
 
 
