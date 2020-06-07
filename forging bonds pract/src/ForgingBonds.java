@@ -34,12 +34,13 @@ public class ForgingBonds {
                    case 4:
                     choose.four();
                 break;
+                //check vm version for here
             }
 
 
         }
         //it has clicked FB
-        if (q ==1 || q ==0) {
+        if (q ==1) {
         System.out.println("amisel?");
         robot.delay(10000);
 //now clicking sel stage

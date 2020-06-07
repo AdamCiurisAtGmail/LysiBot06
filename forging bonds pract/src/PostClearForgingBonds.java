@@ -140,9 +140,9 @@ public class PostClearForgingBonds {
         int arrayplace = 0;
 
 
-        double j = 45;
-        double xmax = 597;
-        double xmin = 587;
+        double j = 43;
+        double xmax = 607;
+        double xmin = 597;
         int size = (int) (xmax-xmin);
 
         Color colorarray[] = new Color[size+1];

@@ -17,25 +17,6 @@ public class PostClearTempestQuests {
         int maxruns2 = 0;
         int questspressed = 0;
 
-        try {
-            robot = new Robot();
-        } catch (AWTException e) {
-            e.printStackTrace();
-        }
-        //clicking you win
-        int xrandtwo = (int) (Math.random() * 220);
-        int yrandtwo = (int) (Math.random() * 27);
-        int xpicktwo = (int) (xrandtwo + 400);
-        int ypicktwo = (int) (yrandtwo + 620);
-
-        System.out.println(xpicktwo + " " + ypicktwo);
-        robot.mouseMove(xpicktwo, ypicktwo);
-        robot.delay((int) (2000));
-        Clicks.leftClick(robot);
-
-        robot.delay((int) (2000 * Math.random() + 5000));
-
-        robot.delay(10000);
 
 
         //checks if quest borders are there and should be working fine imported from TT
@@ -56,6 +37,27 @@ public class PostClearTempestQuests {
 
             maxruns2++;
         }
+
+
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+        //clicking you win
+        int xrandtwo = (int) (Math.random() * 220);
+        int yrandtwo = (int) (Math.random() * 27);
+        int xpicktwo = (int) (xrandtwo + 400);
+        int ypicktwo = (int) (yrandtwo + 620);
+
+        System.out.println(xpicktwo + " " + ypicktwo);
+        robot.mouseMove(xpicktwo, ypicktwo);
+        robot.delay((int) (2000));
+        Clicks.leftClick(robot);
+
+        robot.delay((int) (2000 * Math.random() + 5000));
+
+        robot.delay(2000);
 
 //below clicks through rewards
 

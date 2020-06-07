@@ -127,7 +127,6 @@ else false
 
 
 
-
         //if tolerance tests pass return true
         if ( j == total) {
             return true; }
@@ -136,6 +135,54 @@ else false
         }
 
     }
+    public static boolean HMClear(int[] tolerances, int total){
+        double a = 1;
+        double b = 3;
+        double c = (a / b);
+
+        double e = 14;
+
+        double f = 6;
+        double g = e / f;
+        int darkerR = (int) 150;
+        int darkerG = (int) 230;
+        int darkerB = (int) 230;
+
+        int lighterR = (int) 255;
+        int lighterG = (int) 255;
+        int lighterB = (int) 255;
+        int j = 0;
+        for (int i = 0; i < total; i++) {
+
+
+            double please = (double) Math.sin(c * Math.PI * i - g * Math.PI);
+
+            if (i == 0 || i % 3 == 0) {
+                if (tolerances[i] >= darkerR && tolerances[i] <= lighterR) {
+                    j++;
+                }
+
+            } else if (Math.round(please) == 0) {
+                if (tolerances[i] >= darkerG && tolerances[i] <= lighterG) {
+                    j++;
+                }
+
+            } else {
+                if (tolerances[i] >= darkerB && tolerances[i] <= lighterB) {
+                    j++;
+                }
+
+            }
+
+        }
+        //if tolerance tests pass return true
+        if (j == total) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /*
        new tolerance test for the border
         */
@@ -213,13 +260,13 @@ else false
             //formula for if thens
 
             //could be too tight
-            int darkerredR = (int) 60;
-            int darkerredG = (int) 25;
-            int darkerredB = (int) 30;
+            int darkerredR = (int) 55;
+            int darkerredG = (int) 20;
+            int darkerredB = (int) 19;
 
-            int lighterredR = (int) 77;
-            int lighterredG = (int) 45;
-            int lighterredB = (int) 50;
+            int lighterredR = (int) 250;
+            int lighterredG = (int) 65;
+            int lighterredB = (int) 60;
 
             //tolerances tested below
 

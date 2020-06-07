@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
 
-        System.out.println("tt(1) , fb(2) , tempesttrials(3)");
+        System.out.println("tt(1) , fb(2) , tempesttrials(3), ");
+        System.out.println("HMFarm(4)");
         int choose = (int) scnr.nextInt();
        switch (choose) {
            case 1:{
@@ -63,14 +64,31 @@ public class Main {
                BattleOccuringTempest test = new BattleOccuringTempest();
                PostClearTempestQuests aaugh = new PostClearTempestQuests();
 
-               int q = 0;
 
-               beginTempest.Eventstempesttrials(q,whichbox,stratum);
+               beginTempest.Eventstempesttrials(1,whichbox,stratum);
                for (int i = 1; i < runs; i++){
                     test.BattleOccuring();
                     aaugh.FinalTasks();
                 }
+               break;
 
+           }
+           case 4: {
+               System.out.println("choose runs, and stratum level");
+               HeroMerit hm = new HeroMerit();
+               PostClearHeroMerit pchm = new PostClearHeroMerit();
+               int runs = scnr.nextInt();
+               int stratum = scnr.nextInt();
+               int q = 1;
+
+               for (int i=1;i<runs;i++){
+                   hm.HM(q, stratum);
+                   pchm.PostClearHM();
+                   q = 0;
+
+               }
+
+               break;
            }
 
 

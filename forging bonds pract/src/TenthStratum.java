@@ -85,4 +85,31 @@ public class TenthStratum {
         }
 
     }
+    public void ninthStratum(){
+
+    }
+    public void eighthStratum(){
+
+    }
+    public void seventhStratum(){
+
+    }
+    public void sixthStratum(){
+
+    }
+    public void fifthStratum(){
+
+    }
+    public void fourthStratum(){
+
+    }
+    public void thirdStratum(){
+
+    }
+    public void secondStratum(){
+
+    }
+    public void firstStratum(){
+
+    }
 }

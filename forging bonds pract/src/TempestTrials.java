@@ -17,7 +17,7 @@ public class TempestTrials {
             e.printStackTrace();
         }
       /*
-      selecting area to click to start FB
+      selecting area to click to start temp[est
        */
         if (q == 1) {
 
@@ -61,7 +61,7 @@ public class TempestTrials {
             int yrandbar = (int) (Math.random() * 5);
             //maybe should math rand below
             int xpickbar = (int) (695);
-            int ypickbar = (int) (yrandbar + 230);
+            int ypickbar = (int) (yrandbar + 255);
 
             System.out.println(xpickbar + " " + ypickbar);
             robot.mouseMove(xpickbar, ypickbar);
@@ -125,10 +125,10 @@ public class TempestTrials {
 
 
             //fight!
-            int xrandfite = (int) (Math.random() * 219);
-            int yrandfite = (int) (Math.random() * 29);
-            int xpickfite = (int) (xrandfite + 402);
-            int ypickfite = (int) (yrandfite + 570);
+            int xrandfite = (int) (Math.random() * 210);
+            int yrandfite = (int) (Math.random() * 27);
+            int xpickfite = (int) (xrandfite + 407);
+            int ypickfite = (int) (yrandfite + 542);
 
 
             robot.mouseMove(xpickfite, ypickfite);
