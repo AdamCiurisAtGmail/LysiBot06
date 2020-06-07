@@ -74,15 +74,16 @@ public class Main {
 
            }
            case 4: {
-               System.out.println("choose runs, and stratum level");
+               System.out.println("choose runs, box location in special maps, and difficulty");
                HeroMerit hm = new HeroMerit();
                PostClearHeroMerit pchm = new PostClearHeroMerit();
                int runs = scnr.nextInt();
+               int chooser = scnr.nextInt();
                int stratum = scnr.nextInt();
                int q = 1;
 
                for (int i=1;i<runs;i++){
-                   hm.HM(q, stratum);
+                   hm.HM(q, chooser, stratum);
                    pchm.PostClearHM();
                    q = 0;
 

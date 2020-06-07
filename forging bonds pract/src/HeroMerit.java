@@ -8,7 +8,7 @@ public class HeroMerit {
     private Robot robot;
     private Clicks clicks;
 
-    public void HM(int q, int level) {
+    public void HM(int q, int level, int difficulty) {
 
         HeroMerit Chooser = new HeroMerit();
 
@@ -38,6 +38,24 @@ public class HeroMerit {
             robot.delay(3000);
             switch(level){
                 case 1:{
+                    Chooser.one();
+                    break;
+
+                }
+                case 2:{
+                    Chooser.two();
+                    break;}
+            case 3:{
+            Chooser.three();
+            break;
+            }
+            }
+            }
+
+        //it has clicked into hm
+        if (q ==1 || q ==0) {
+            switch(difficulty){
+                case 1:{
                     Chooser.abyssal();
                     break;
 
@@ -45,15 +63,10 @@ public class HeroMerit {
                 case 2:{
                     Chooser.lunatic();
                     break;}
-            case 3:{
-            Chooser.third();
-            break;
-            }
-            }
-            }
+                case 3:{
+                    Chooser.hard();
 
-        //it has clicked training tower
-        if (q ==1 || q ==0) {
+                }
 
             robot.delay((int) (2000 * Math.random() + 3000));
 
@@ -94,7 +107,8 @@ public class HeroMerit {
         }
 
     }
-    public void abyssal(){
+    }
+    public void one(){
         //needs to click level
         int xrandtwo = (int) (Math.random() * 291);
         int yrandtwo = (int) (Math.random() * 62);
@@ -106,7 +120,7 @@ public class HeroMerit {
         Clicks.leftClick(robot);
         robot.delay((int) (2000 * Math.random() + 5000));
     }
-    public void lunatic(){
+    public void two(){
         int xrandtwo = (int) (Math.random() * 295);
         int yrandtwo = (int) (Math.random() * 72);
         int xpicktwo = (int) (xrandtwo + 365);
@@ -118,7 +132,7 @@ public class HeroMerit {
         robot.delay((int) (2000 * Math.random() + 5000));
 
     }
-    public void third(){
+    public void three(){
         int xrandtwo = (int) (Math.random() * 288);
         int yrandtwo = (int) (Math.random() * 71);
         int xpicktwo = (int) (xrandtwo + 368);
@@ -131,4 +145,45 @@ public class HeroMerit {
 
 
     }
+        public void abyssal() {
+            int xrandtwo = (int) (Math.random() * 238);
+            int yrandtwo = (int) (Math.random() * 52);
+            int xpicktwo = (int) (xrandtwo + 396);
+            int ypicktwo = (int) (yrandtwo + 227);
+
+            System.out.println(xpicktwo + " " + ypicktwo);
+            robot.mouseMove(xpicktwo, ypicktwo);
+            Clicks.leftClick(robot);
+            robot.delay((int) (2000 * Math.random() + 5000));
+
+
+        }
+        public void lunatic(){
+            int xrandtwo = (int) (Math.random() * 234);
+            int yrandtwo = (int) (Math.random() * 54);
+            int xpicktwo = (int) (xrandtwo + 396);
+            int ypicktwo = (int) (yrandtwo + 349);
+
+            System.out.println(xpicktwo + " " + ypicktwo);
+            robot.mouseMove(xpicktwo, ypicktwo);
+            Clicks.leftClick(robot);
+            robot.delay((int) (2000 * Math.random() + 5000));
+
+
+        }
+        public void hard(){
+            int xrandtwo = (int) (Math.random() * 250);
+            int yrandtwo = (int) (Math.random() * 54);
+            int xpicktwo = (int) (xrandtwo + 389);
+            int ypicktwo = (int) (yrandtwo + 470);
+
+            System.out.println(xpicktwo + " " + ypicktwo);
+            robot.mouseMove(xpicktwo, ypicktwo);
+            Clicks.leftClick(robot);
+            robot.delay((int) (2000 * Math.random() + 5000));
+
+
+        }
+
+
 }
